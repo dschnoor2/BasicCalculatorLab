@@ -8,17 +8,17 @@ namespace BasicCalculator
         {
             Console.WriteLine("*** BASIC CALCULATOR ***");
 
-            Console.WriteLine("Enter the first number");
+            Console.WriteLine("Enter Temperature in Fahrenhiet");
 
             // int.Parse will take a string data type and convert it to an int data type
-            int firstNumber = int.Parse(Console.ReadLine());
+            int Temp = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Enter the second number");
-            int secondNumber = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter Relative Humdidity");
+            int RH = int.Parse(Console.ReadLine());
 
-            int sum = firstNumber + secondNumber;
+            decimal dewPoint = Temp -  9 *(100 - RH) / 25;
 
-            Console.WriteLine("The answer is " + sum);
+            Console.WriteLine("The answer is " + dewPoint);
         }
     }
 }
