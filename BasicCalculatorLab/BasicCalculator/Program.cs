@@ -11,19 +11,19 @@ namespace BasicCalculator
             Console.WriteLine("Enter Temperature in Fahrenhiet");
 
             // int.Parse will take a string data type and convert it to an int data type
-            int tempFahr = int.Parse(Console.ReadLine()); //tempFahr = Temperature in Fahrenheit
+            int temperatureFahrenheit = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Enter Relative Humidity");
-            int rH = int.Parse(Console.ReadLine());  //rH = Relative Humidity
+            int relativeHumidity = int.Parse(Console.ReadLine());
 
-            double dewPoint = tempFahr -  9 * (100 - rH) / 25;
+            double dewPoint = temperatureFahrenheit -  9 * (100 - relativeHumidity) / 25;
 
             Console.WriteLine("The Dew Point is " + dewPoint);
 
-            Console.WriteLine("Enter Wind Speed");
+            Console.WriteLine("Enter Wind Speed in MPH");
             int windSpeed = int.Parse(Console.ReadLine());
 
-            double windChill = 35.74 + (0.6215 * tempFahr) - 35.75 * Math.Pow(windSpeed, 0.16) + 0.4275 * tempFahr * Math.Pow(windSpeed, 0.16);
+            double windChill = 35.74 + (0.6215 * temperatureFahrenheit) - 35.75 * Math.Pow(windSpeed, 0.16) + 0.4275 * temperatureFahrenheit * Math.Pow(windSpeed, 0.16);
 
             Console.WriteLine("The Wind Chill is " + windChill);
         }
